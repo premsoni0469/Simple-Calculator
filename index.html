@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>My Calculator</title>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <div class="history-btn">
+          <button onclick="toggleHistory()">
+            <span class="material-symbols-outlined"> history </span>
+          </button>
+        </div>
+        <div class="display">
+          <input type="text" name="input" id="subDisplay" disabled />
+          <input type="text" name="input" id="mainDisplay" value="0" />
+        </div>
+        <div class="buttons">
+          <div class="set1">
+            <button class="regular" onclick="sqrt()">√</button>
+            <button class="regular" onclick="floating()">.</button>
+            <button class="regular">^</button>
+            <button class="regular">!</button>
+          </div>
+          <div class="set2">
+            <button onclick="clearAll()" class="ac">AC</button>
+            <button class="green" onclick="brackets()">()</button>
+            <button class="green" onclick="percentage()">%</button>
+            <button onclick="getValue('/')" class="green">÷</button>
+          </div>
+          <div class="set3">
+            <button onclick="getValue('7')" class="regular">7</button>
+            <button onclick="getValue('8')" class="regular">8</button>
+            <button onclick="getValue('9')" class="regular">9</button>
+            <button onclick="getValue('*')" class="green">×</button>
+          </div>
+          <div class="set4">
+            <button onclick="getValue('4')" class="regular">4</button>
+            <button onclick="getValue('5')" class="regular">5</button>
+            <button onclick="getValue('6')" class="regular">6</button>
+            <button onclick="getValue('-')" class="green">-</button>
+          </div>
+          <div class="set5">
+            <button onclick="getValue('1')" class="regular">1</button>
+            <button onclick="getValue('2')" class="regular">2</button>
+            <button onclick="getValue('3')" class="regular">3</button>
+            <button onclick="getValue('+')" class="green">+</button>
+          </div>
+          <div class="set6">
+            <button onclick="getValue('0')" class="regular">0</button>
+            <button onclick="getValue('00')" class="regular">00</button>
+            <button onclick="removeLastDigit()" class="regular">⌫</button>
+            <button onclick="solve()" class="dark-green">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="history" id="history">
+      <p style="display: inline">HISTORY</p>
+      <button class="clear-btn" onclick="clearHistory()">Clear</button>
+      <div id="historyItems">
+        <!-- <div id="historyItem">
+                <p>95 - 41 =</p>
+                <p>54</p>
+            </div>
+            <br>
+            <div id="historyItem">
+                <p>95 - 41 =</p>
+                <p>54</p>
+            </div>
+            <br>
+        </div> -->
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

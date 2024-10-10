@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+    font-size: 20px;
+}
+body{
+    background-color: #3c3c3c;
+    /* display: flex; */
+}
+.material-symbols-outlined {
+    color: white;
+}
+.outer{
+    border: 1px solid grey;
+    width: 25%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #1a1c1a;
+    border-radius: 25px;
+}
+.inner{
+    padding: 25px;
+}
+.history-btn{
+    display:flex;
+    justify-content: end;
+    padding-bottom: 5px;
+}
+.history-btn button{
+    background-color: transparent;
+    border: none;
+}
+.display{
+    height: 80px;
+    background-color: #2b352e;
+    border-radius: 10px;
+}
+.display input{
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    border: none;
+    color: white;
+    background-color: transparent;
+    text-align: right;
+}
+#subDisplay{
+    color: #607667;
+}
+input:focus{       
+    /* To remove outline from input box when giving input */
+    outline: none;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.buttons button{
+    width: 75px;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+}
+.ac{
+    background-color: #2d4b58;
+    color: #b0d0de;
+}
+.green{
+    background-color: #3b4a40;
+    color: #c0d2c4;
+}
+.dark-green{
+    background-color: #215135;
+    color: #baf0cb;
+}
+.regular{
+    background-color: #202521;
+    color:#bacbbc;
+}
+.set1, .set2, .set3, .set4, .set5, .set6{
+    padding-top: 10px;
+}
+.history{
+    position: absolute;
+    top: 10px;
+    margin-top: 40px;
+    right: 12%;
+    color: white;
+    font-weight: bold;
+    overflow: auto;
+    width: 20%;
+    padding: 10px;
+    height: 75%;
+    border: 1px solid white;
+    border-radius: 9px;
+    /* display: none; */
+}
+.history h4{
+    padding-bottom: 25px;
+}
+
+.historyItem{
+    background-color: #4d4d4d;
+    padding: 10px 50px;
+    border-radius: 10px;
+    font-weight: normal;
+    text-align: right;
+}
+.clear-btn{
+    display: inline;
+    border: 1px solid red;
+    color: crimson;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .outer{
+        width: 50%;
+        margin-left: 50px;
+    }
+    .inner{
+        width: 100%;
+    }
+    .history{
+        /* font-size: 5px; */
+        width: 30%;
+    }
+    .history .historyItem{
+        font-size: 5px;
+    }
+    .history .clear-btn{
+        scale: 0.75;
+        display: inline;
+    }
+}
